@@ -37,7 +37,7 @@ def BubbleSortTime(m):
     inputList = BubbleSort.BubbleSort(inputList)
     aEndTime = time.time()
     aTime = aEndTime-aStartTime
-    print("BubbleSort       : " + str(aTime))
+    print("BubbleSort         : " + str(aTime))
     
 
 def ShellSortTime(m):
@@ -48,7 +48,7 @@ def ShellSortTime(m):
     b = ShellSort.ShellSort(inputList)
     bEndTime = time.time()
     bTime = bEndTime-bStartTime
-    print("ShellSort        : " + str(bTime))
+    print("ShellSort          : " + str(bTime))
 
 def InsertionSortTime(m):
     cTime = 0.0
@@ -58,7 +58,7 @@ def InsertionSortTime(m):
     c = InsertionSort.InsertionSort(inputList)
     cEndTime = time.time()
     cTime = cEndTime-cStartTime
-    print("InsertionSort    : " + str(cTime))
+    print("InsertionSort      : " + str(cTime))
 
 def SelectionSortTime(m):
     dTime = 0.0
@@ -68,7 +68,17 @@ def SelectionSortTime(m):
     d = SelectionSort.SelectionSort(inputList)
     dEndTime = time.time()
     dTime = dEndTime-dStartTime
-    print("SelectionSort    : " + str(dTime))
+    print("SelectionSort      : " + str(dTime))
+
+def MergeSortTime(m):
+    etime = 0.0
+    createData(m)
+    inputList = LinkedList.LinkedList(readInData())
+    eStartTime = time.time()
+    e = SelectionSort.SelectionSort(inputList)
+    eEndTime = time.time()
+    eTime = eEndTime-eStartTime
+    print("Recursive MergeSort : " + str(eTime))
 
 
 for i in range(100,450,50):
@@ -77,6 +87,7 @@ for i in range(100,450,50):
     ShellSortTime(i)
     InsertionSortTime(i)
     SelectionSortTime(i)
+    MergeSortTime(i)
     print("\n")
 
 
